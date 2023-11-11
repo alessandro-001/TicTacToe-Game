@@ -1,6 +1,7 @@
 #include "ttt_functions.hpp"
 #include <iostream>
 
+//print the board func
 void printBoard(const std::vector<std::vector<char>>& board) {
     for (const auto& row : board) {
         for (char cell : row) {
@@ -10,6 +11,7 @@ void printBoard(const std::vector<std::vector<char>>& board) {
     }
 }
 
+//check board for win func
 bool checkWin(const std::vector<std::vector<char>>& board, char player) {
    for (int i = 0; i < 3; ++i) {
         if ((board[i][0] == player && board[i][1] == player && board[i][2] == player) ||
@@ -18,7 +20,7 @@ bool checkWin(const std::vector<std::vector<char>>& board, char player) {
         }
     }
 
-    // Check diagonals
+    //check diagonal
     if ((board[0][0] == player && board[1][1] == player && board[2][2] == player) ||
         (board[0][2] == player && board[1][1] == player && board[2][0] == player)) {
         return true;
@@ -27,6 +29,7 @@ bool checkWin(const std::vector<std::vector<char>>& board, char player) {
     return false;
 }
 
+//check for tie func
 bool checkTie(const std::vector<std::vector<char>>& board) {
     for (const auto& row : board) {
         for (char cell : row) {
@@ -35,5 +38,5 @@ bool checkTie(const std::vector<std::vector<char>>& board) {
             }
         }
     }
-    return true; // The board is full, game is a tie
+    return true; //board if full = tie
 }

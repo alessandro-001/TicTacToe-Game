@@ -7,21 +7,21 @@ int main() {
     char currentPlayer = 'X';
 
     while (true) {
-        // Print the current state of the board
+        // Print the current board
         printBoard(board);
 
-        // Get the player's move
+        // get player's move
         int row, col;
         std::cout << "Player " << currentPlayer << ", enter your move (row and column): ";
         std::cin >> row >> col;
 
-        // Check if the move is valid
+        //check if move is valid
         if (row < 0 || row >= 3 || col < 0 || col >= 3 || board[row][col] != ' ') {
             std::cout << "Invalid move. Try again.\n";
             continue;
         }
 
-        // Make the move
+        //make the move
         board[row][col] = currentPlayer;
 
         // Check for a win
@@ -32,7 +32,7 @@ int main() {
             break;
         }
 
-        // Check for a tie
+        //check for tie
         if (checkTie(board)) {
             // Print the final board
             printBoard(board);
