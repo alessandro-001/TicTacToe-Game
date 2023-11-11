@@ -11,7 +11,7 @@ This is a basic implementation of the classic Tic-Tac-Toe game where two players
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/alessandro-001/TicTacToe-Game.git
-   cd tic-tac-toe
+   cd TicTacToe-Game
 
 2. **Compile the Program:**
     ```bash

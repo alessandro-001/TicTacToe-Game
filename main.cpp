@@ -4,7 +4,7 @@
 
 int main() {
     std::cout << "========================================================================" << std::endl;
-    std::cout << "TicTacToe game, rows starts at 0 until 2 and columns starts at 0 until 2" << std::endl;
+    std::cout << "TicTacToe game,\nInstructions: Enter a integer starting at index 0 until 2 adding \na whitespace between them, \nEnter row first then the column, \nWin the game doing a tris vertical, horizontal or diagonal \n" << std::endl;
     std::cout << "========================================================================" << std::endl;
 
     std::vector<std::vector<char>> board(3, std::vector<char>(3, ' '));
