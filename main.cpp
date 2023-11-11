@@ -3,16 +3,20 @@
 #include <vector>
 
 int main() {
+    std::cout << "========================================================================" << std::endl;
+    std::cout << "TicTacToe game, rows starts at 0 until 2 and columns starts at 0 until 2" << std::endl;
+    std::cout << "========================================================================" << std::endl;
+
     std::vector<std::vector<char>> board(3, std::vector<char>(3, ' '));
     char currentPlayer = 'X';
 
     while (true) {
-        // Print the current board
+        //print the current board
         printBoard(board);
 
         // get player's move
         int row, col;
-        std::cout << "Player " << currentPlayer << ", enter your move (row and column): ";
+        std::cout << "Player " << currentPlayer << ", enter your move (row and column, from 0 to 2): ";
         std::cin >> row >> col;
 
         //check if move is valid
@@ -31,7 +35,6 @@ int main() {
             std::cout << "Player " << currentPlayer << " wins!\n";
             break;
         }
-
         //check for tie
         if (checkTie(board)) {
             // Print the final board
@@ -39,10 +42,8 @@ int main() {
             std::cout << "It's a tie!\n";
             break;
         }
-
         // Switch to the other player
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
     }
-
     return 0;
 }
